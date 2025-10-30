@@ -82,7 +82,7 @@ switch screen
  {
  case 0:
  draw_sprite(spr_splash,0,5,45)
- draw_text(190,250,"Version: 1.1BETA")
+ draw_text(190,250,"Version: 1.1")
  draw_text(60,285,"Check the readme for more details#on what each patch does.")
  break
 
