@@ -16,6 +16,21 @@ if (mouse_x>=x && mouse_x<=x+sprite_get_width(sprite_index)) && (mouse_y>=y && m
  mouseon=1
  if mouse_check_button_pressed(mb_left)
   {
+  if obj_main.screen=1 && buttonid=2
+   {
+   var que;
+   que=show_question
+   ("This patch is intended to be used with DXWnd and DGVoodoo.
+   It will have unintended consequences if not used with a window hooker.
+   
+   Do you wish to proceed?
+   ")
+
+   if que=0
+    {
+    exit
+    }
+   }
   main_ping(buttonid)
   }
  }
