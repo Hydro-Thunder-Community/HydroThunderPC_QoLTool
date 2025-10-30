@@ -23,6 +23,8 @@ A video of the tool in action: https://www.youtube.com/watch?v=VeKZQSPKi10
 
 **Keep alive when unfocused** - Mainly for use with DXWnd/dgVoodoo. Bear in mind that keyboard inputs will still register, and sound is muted(for now).
 
+**Pause race with controller** - In the stock game, you could not pause the game without the keyboard. This patch allows you to so, meaning you can now exit races with the controller as well.
+
 **Disable CD Check** - Changes one byte in the EXE to fool the game into believing the CD is present. Useful if you installed from an original disc, as the CD is only ever needed for this check.
 
 
