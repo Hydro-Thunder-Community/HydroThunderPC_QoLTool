@@ -35,4 +35,9 @@ A video of the tool in action: https://www.youtube.com/watch?v=VeKZQSPKi10
 
 # PRACTICE TOOLS:
 These can be installed and uninstalled from your EXE. All that's changed are memory address references. 
-What this does is make some internal variables in the game visible to the player, such as your boat's speed, the hydro jump step, and the wrong way turnaround timer. Having these things on hand is very useful for practicing speedruns, however they are intended for practice only. Which is where the uninstallation comes in to revert what changes were made.
+What this does is make some internal variables in the game visible to the player, they are:
+- Your boat's true speed. This is different from what the speedometer implies.
+- Which step in the Hydro Jump process you are on. So if you miss it, you'll see at which step things went wrong.
+- The wrong way turnaround timer. This is a visual that can be used to practice the redirect technique.
+
+Having these things on hand is very useful for practicing speedruns, however they are intended for practice only. Which is where the uninstallation comes in to revert what changes were made.
