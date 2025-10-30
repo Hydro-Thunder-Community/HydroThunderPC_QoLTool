@@ -43,7 +43,7 @@ switch screen
 
  make_button(0,"Throttle fix")
  make_button(1,"Controller fix")
- make_button(2,"Improve window stability")
+ make_button(2,"Improve DXWnd/DGVoodoo window")
  make_button(3,"Keep alive when unfocused")
  make_button(4,"Pause race with controller")
  //make_button(5,"Don't move cursor on startup")

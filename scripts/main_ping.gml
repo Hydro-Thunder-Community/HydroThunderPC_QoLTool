@@ -12,11 +12,11 @@ with obj_main
   case 1:
   if argument0<8
    {
-   apply_patch(argument0)
    if argument0=2
     {
     apply_patch(9)
     }
+   apply_patch(argument0)
    }
   else if argument0=8
    {

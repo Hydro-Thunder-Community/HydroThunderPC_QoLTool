@@ -31,6 +31,7 @@ switch exetarget
   This patch applies changes to the game that are intended for practice and/or research use. These are:
   - Displaying the internal speed in place of the countdown timer.
   - Displaying the redirect timer in place of the track time.
+  - Displaying the Hydro Jump step counter in place of the current race position.
   
   Do you wish to proceed?
   ")
@@ -50,6 +51,9 @@ switch exetarget
   file_bin_write_byte(read,$0D)
   file_bin_seek(read,$33E8B)
   file_bin_write_byte(read,$A0)
+  file_bin_seek(read,$33852)
+  file_bin_write_byte(read,$B0)
+  file_bin_write_byte(read,$0C)
   break
 
   case 4:
@@ -64,6 +68,9 @@ switch exetarget
   file_bin_write_byte(read,$0A)
   file_bin_seek(read,$33E8B)
   file_bin_write_byte(read,$54)
+  file_bin_seek(read,$33852)
+  file_bin_write_byte(read,$94)
+  file_bin_write_byte(read,$0A)
   break
 
   case 5:
@@ -71,7 +78,9 @@ switch exetarget
   cont=get_string
   (
   "Enter the exact button to be used for pausing a race.
+  This is the internal numbered ID of the button.
   To find this, open the controller properties in Windows' Game Controller Settings. This is usually reached from Devices and Printers.
+  To proceed without patching, leave the entry blank.
   ","")
   if cont=""
    {
