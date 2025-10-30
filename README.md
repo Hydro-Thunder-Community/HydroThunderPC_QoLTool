@@ -19,7 +19,7 @@ A video of the tool in action: https://www.youtube.com/watch?v=VeKZQSPKi10
 
 **Controller fix** - When a controller is selected to be used, un-focusing the game will seemingly "unlatch" the controller from it. However, something goes wrong when it's supposed to be restored upon re-focusing, specific values do not line up correctly as the code expects. This causes your controller to not only no longer work, but the game is stuck believing a controller is there, when in fact it's just receiving invalid inputs. The only fixes for this were to restart the game, or going into the joystick menu and re-selecting your controller manually. This patch changes one asm opcode, to allow the routine to accept higher values, which fixes the issue.
 
-**Improve window stability** - Intended for use with DXWnd/dgVoodoo2. If the game detects that anything could happen to put it out of fullscreen, it'll fall back to it's 320x240 software rendered window mode. Even with forcing, simply touching the game window will cause it to happen. And having to switch back can cause graphical glitches, or even a crash. This patches that out, making the window far more stable, now being able to be moved around and clicked out of/back into like a normal game.
+**Improve DXWnd/DGVoodoo window** - Intended for use with DXWnd/dgVoodoo2. If the game detects that anything could happen to put it out of fullscreen, it'll fall back to it's 320x240 software rendered window mode. Even with forcing, simply touching the game window will cause it to happen. And having to switch back can cause graphical glitches, or even a crash. This patches that out, making the window far more stable, now being able to be moved around and clicked out of/back into like a normal game.
 
 **Keep alive when unfocused** - Mainly for use with DXWnd/dgVoodoo. Bear in mind that keyboard inputs will still register, and sound is muted(for now).
 
@@ -34,5 +34,5 @@ A video of the tool in action: https://www.youtube.com/watch?v=VeKZQSPKi10
 **Don't move cursor on startup**
 
 # PRACTICE TOOLS:
-These can be installed and uninstalled from your EXE. All that's changed are memory address references.
-What this does is make some internal variables in the game visible to the player, such as your boat's speed and the wrong way turnaround timer. Having these things on hand is very useful for practicing speedruns, however they are intended for practice only. Which is where the uninstallation comes in to easily revert what changes were made.
+These can be installed and uninstalled from your EXE. All that's changed are memory address references. 
+What this does is make some internal variables in the game visible to the player, such as your boat's speed, the hydro jump step, and the wrong way turnaround timer. Having these things on hand is very useful for practicing speedruns, however they are intended for practice only. Which is where the uninstallation comes in to revert what changes were made.
