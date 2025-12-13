@@ -16,6 +16,12 @@ with obj_main
     {
     apply_patch(9)
     }
+   else if argument0=5
+    {
+    apply_patch(11)
+    apply_patch(12)
+    apply_patch(13)
+    }
    apply_patch(argument0)
    }
   else if argument0=8
@@ -25,8 +31,12 @@ with obj_main
    apply_patch(2)
    apply_patch(3)
    apply_patch(4)
+   apply_patch(5)
    apply_patch(7)
    apply_patch(9)
+   apply_patch(11)
+   apply_patch(12)
+   apply_patch(13)
    }
   break
 

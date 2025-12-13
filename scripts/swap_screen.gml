@@ -19,34 +19,46 @@ switch screen
  patchkind[2]=0
  patchkind[3]=0
  patchkind[4]=5
- //patchkind[5]=0
+ patchkind[5]=0
  patchkind[7]=2
  patchkind[9]=0
+
+ patchkind[11]=0
+ patchkind[12]=0
+ patchkind[13]=0
 
  patchstart[0]=$2A294
  patchstart[1]=$72C37
  patchstart[2]=$7DD00
  patchstart[3]=$7DC08
  patchstart[4]=$7E155
- //patchstart[5]=$6D178
+ patchstart[5]=$639D6
  patchstart[7]=$7E09B
  patchstart[9]=$7DC14
+
+ patchstart[11]=$639F3
+ patchstart[12]=$639F9
+ patchstart[13]=$639FF
 
  patchend[0]=$2A29F
  patchend[1]=$7F
  patchend[2]=$7DD04
  patchend[3]=$7DC0C
  patchend[4]=$71A55
- //patchend[5]=$6D18F
+ patchend[5]=$639DB
  patchend[7]=$01
  patchend[9]=$7DC18
+
+ patchend[11]=$639F8
+ patchend[12]=$639FE
+ patchend[13]=$63A04
 
  make_button(0,"Throttle fix")
  make_button(1,"Controller fix")
  make_button(2,"Improve DXWnd/DGVoodoo window")
  make_button(3,"Keep alive when unfocused")
  make_button(4,"Pause race with controller")
- //make_button(5,"Don't move cursor on startup")
+ make_button(5,"Allow persistent initials")
  make_button(7,"Disable CD check")
  make_button(8,"Apply all")
  break
