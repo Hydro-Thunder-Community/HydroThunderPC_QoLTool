@@ -1,6 +1,6 @@
 # Hydro Thunder(PC) QoL Patch Tool
 
-A program created and written in Game Maker 8.2 by AxlThunder, which was made to address issues in the PC port of Hydro Thunder, as well as introduce some quality of life improvements.
+A program created and written in Game Maker 8.2 by AxlThunder, made to address issues in the PC port of Hydro Thunder, as well as introduce some quality of life improvements.
 
 It is designed primarily for the Eurocom 2001 release(the one that's less than 70mb and has like 3-4 files). As of the current verison, it can detect the Midway Arcade Treasures Deluxe Edition version(only the European release EXE is tested as detectable), but it can only apply the Throttle Fix to it.
 
