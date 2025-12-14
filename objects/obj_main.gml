@@ -33,6 +33,8 @@ exehaspractice[3]=0
 button_x=15
 button_y=5
 
+cont=""
+
 screen=0
 
 swap_screen(0)

@@ -11,6 +11,10 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+if instance_exists(obj_contrbutton)
+ {
+ exit
+ }
 if (mouse_x>=x && mouse_x<=x+sprite_get_width(sprite_index)) && (mouse_y>=y && mouse_y<=y+sprite_get_height(sprite_index))
  {
  mouseon=1
