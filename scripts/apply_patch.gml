@@ -77,6 +77,7 @@ switch exetarget
   if !instance_exists(obj_contrbutton)
    {
    instance_create(40,180,obj_contrbutton)
+   file_bin_close(read)
    exit
    }
   var cont2, iterations, hex1, hex2;
@@ -96,7 +97,7 @@ switch exetarget
    {
    exit
    }
-  iterations=real(cont)
+  iterations=cont
   cont2=1
 
   for(i=1; i<iterations; i+=1)
