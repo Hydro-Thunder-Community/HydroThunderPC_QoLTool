@@ -2,11 +2,11 @@ var read;
 read=file_bin_open(currentfile,2)
 switch exetarget
  {
- case 1:
+ case 1: //pc, eurocom
  file_bin_seek(read,patchstart[argument0])
  switch patchkind[argument0]
   {
-  case 0:
+  case 0: //nops all instructions from patchstart to patchend
   for(i=patchstart[argument0]; i<=patchend[argument0]; i+=1)
    {
    file_bin_write_byte(read,$90)
@@ -14,17 +14,17 @@ switch exetarget
    }
   break
 
-  case 1:
+  case 1: //special case for "allow 1% volume"
   file_bin_write_byte(read,$01)
   file_bin_seek(read,patchend[argument0])
   file_bin_write_byte(read,$01)
   break
 
-  case 2:
+  case 2: //writes the byte specified in patchend, at patchstart
   file_bin_write_byte(read,patchend[argument0])
   break
 
-  case 3:
+  case 3: //special case for installing practice tools
   var ext;
   ext=show_question
   ("
@@ -56,7 +56,7 @@ switch exetarget
   file_bin_write_byte(read,$0C)
   break
 
-  case 4:
+  case 4: //special case for uninstalling practice tools
   file_bin_write_byte(read,$A0)
   file_bin_seek(read,patchend[argument0])
   file_bin_write_byte(read,$3D)
@@ -73,9 +73,14 @@ switch exetarget
   file_bin_write_byte(read,$0A)
   break
 
-  case 5:
-  var cont, cont2, iterations, hex1, hex2;
-  cont=get_string
+  case 5: //special case for "pause race with controller" patch
+  if !instance_exists(obj_contrbutton)
+   {
+   instance_create(40,180,obj_contrbutton)
+   exit
+   }
+  var cont2, iterations, hex1, hex2;
+  /*cont=get_string
   (
   "Enter the exact button to be used for pausing a race.
   This is the internal numbered ID of the button.
@@ -85,7 +90,7 @@ switch exetarget
   if cont=""
    {
    exit
-   }
+   }*/
   cont2=string_letters(cont)
   if string_length(cont2)>0
    {
@@ -123,12 +128,24 @@ switch exetarget
   file_bin_write_byte(read,$FF)
   file_bin_write_byte(read,$85)
   file_bin_write_byte(read,$C8)
+  with(obj_contrbutton)
+   {
+   instance_destroy()
+   }
   break
 
+  case 6:
+  file_bin_write_byte(read,$8B)
+  file_bin_write_byte(read,$0D)
+  file_bin_write_byte(read,$D4)
+  file_bin_write_byte(read,$71)
+  file_bin_write_byte(read,$55)
+  file_bin_write_byte(read,$00)
+  break
   }
  break
 
- case 2:
+ case 2: //pc, mat:de
  file_bin_seek(read,patchstart[argument0])
  switch patchkind[argument0]
   {
