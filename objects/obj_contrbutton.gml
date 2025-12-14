@@ -6,9 +6,9 @@ applies_to=self
 */
 for(i=0; i<32; i+=1)
  {
- if joystick_check_button(0,i)
+ if joystick_check_button(0,i) || joystick_check_button(1,i)
   {
-  obj_main.cont=i
+  obj_main.cont=(i+1)
   with(obj_main)
    {
    apply_patch(3)
