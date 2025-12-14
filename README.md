@@ -21,11 +21,7 @@ A video of the tool in action: https://www.youtube.com/watch?v=VeKZQSPKi10
 
 **Improve DXWnd/DGVoodoo window** - Intended for use with DXWnd/dgVoodoo2. If the game detects that anything could happen to put it out of fullscreen, it'll fall back to it's 320x240 software rendered window mode. Even with forcing, simply touching the game window will cause it to happen. And having to switch back can cause graphical glitches, or even a crash. This patches that out, making the window far more stable, now being able to be moved around and clicked out of/back into like a normal game.
 
-**Keep alive when unfocused** - Mainly for use with DXWnd/dgVoodoo. Bear in mind that keyboard inputs will still register, and sound is muted(for now).
-
 **Pause race with controller** - In the stock game, you could not pause the game without the keyboard. This patch allows you to do so, meaning you can now exit races without having to reach for the keyboard.
-
-**Disable CD Check** - Changes one byte in the EXE to fool the game into believing the CD is present. Useful if you installed from an original disc, as the CD is only ever needed for this check.
 
 
 # EXTRA PATCHES:
@@ -34,6 +30,10 @@ A video of the tool in action: https://www.youtube.com/watch?v=VeKZQSPKi10
 **Allow 1% volume** - Just like it says on the tin. This is a loud game, so I felt this would be useful to some.
 
 **Don't move cursor on startup**
+
+**Disable CD Check** - Changes one byte in the EXE to fool the game into believing the CD is present. Useful if you installed from an original disc, as the CD is only ever needed for this check.
+
+**Keep alive when unfocused** - Mainly for use with DXWnd/dgVoodoo. Bear in mind that keyboard inputs will still register, and sound is muted(for now).
 
 # PRACTICE TOOLS:
 These can be installed and uninstalled from your EXE. All that's changed are memory address references. 
