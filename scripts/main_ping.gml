@@ -38,6 +38,7 @@ with obj_main
    apply_patch(3)
    apply_patch(4)
    apply_patch(5)
+   apply_patch(9)
    apply_patch(11)
    apply_patch(12)
    apply_patch(13)
@@ -58,7 +59,6 @@ with obj_main
    apply_patch(3)
    apply_patch(4)
    apply_patch(5)
-   apply_patch(9)
    }
   break
 
