@@ -23,6 +23,11 @@ A video of the tool in action: https://www.youtube.com/watch?v=VeKZQSPKi10
 
 **Pause race with controller** - In the stock game, you could not pause the game without the keyboard. This patch allows you to do so, meaning you can now exit races without having to reach for the keyboard.
 
+**Allow persistent initials** - Normally, the game always clears out any initials you enter. This makes repeated races annoying, though, so this patch puts the PC version on par with N64 and PS1 in that regard.
+
+**Last set camera error fix** - The game remembers your last set camera, but doesn't actually carry it over to the next race, setting it to default instead. This patch makes it so that it's used properly.
+
+
 
 # EXTRA PATCHES:
 **Don't change mixer volume** - If the game detects that it's volume in the mixer isn't what it expects, it changes it to what it expects. This port seems to rely on that slider for it's volume, so this was understandable back in 2001. But nowadays, those who may want to set a finer volume adjustment than what the game normally can do can't. But with this patch, you can. This doesn't affect the internal volume setting itself, and it'll currently only last until you change that in-game volume setting, or restart the game.
